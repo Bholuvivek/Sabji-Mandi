@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        *{
+            background-color: aqua;
+        
+        }
+        button{
+            background-color: blue;
+            font-size: 20px;
+        }
+        h2{
+            background-color: brown;
+            text-align: center;
+            font-size: 40px;
+        }
+        ul{
+            background-position-x: 60px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+
+{% extends 'layout.html' %}
+
+{% block title %}
+Display
+{% endblock %}
+
+{% block content %}
+<h2>All the available in my Sabji Mandi :</h2>
+<ul>
+    {% for sabjis in sabjis %}
+    <li>
+       {{ sabjis }}
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+</body>
+</html>

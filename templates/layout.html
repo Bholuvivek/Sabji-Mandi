@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <style>
+        *{
+            background-color: aqua;
+        }
+        a{
+            text-decoration: none;
+            background-color: brown;
+            
+        }
+        h1{
+            background-color: chartreuse;
+            text-align: center;
+            text-decoration: none;
+            padding: 10px;
+        }
+        button{
+            background-color: blue;
+            align-items: center;
+            box-sizing: border-box;
+            border-radius: 10px;
+            
+            padding-right: 20px;
+            animation-fill-mode: initial;
+        }
+        a{
+            background-color: blue;
+            color: black;
+        }
+        nav{
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <br><br><br>
+    <nav>
+<button><a href="{{ url_for("index") }}">Home</a></button>
+<button>    <a href="{{ url_for("add") }}">Add</a></button>
+<button>   <a href="{{ url_for("search") }}">Search</a></button>
+<button>    <a href="{{ url_for("display_all") }}">Display</a></button>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <p>
+            This is a Sabji Shop 
+        </p>
+    </footer>
+    
+</body>
+</html>

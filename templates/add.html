@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add</title>
+    <style>
+        *{
+            background-color: aqua;
+        
+        }
+        button{
+            background-color: blue;
+            font-size: 20px;
+        }
+        form{
+            background-position-x: 60px;
+        }
+    </style>
+
+
+{% extends 'layout.html' %}
+
+{% block title %}
+
+Add
+{% endblock %}
+
+{% block content %}
+<form method="post">
+    <br><br>
+    <input type="text" name="in_1" placeholder="Sabji name">
+    <br><Br><input type="text" name="in_2" placeholder="Sabji MRP">
+   <br><br> <button>Add Sabji</button>
+</form>
+
+{% endblock %}
+</head>
+<body>
